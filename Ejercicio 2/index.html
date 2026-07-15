@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="es">
   <head>
-    <title>TechEvents - Diseño</title>
+    <title>TechEvents</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
@@ -18,9 +18,7 @@
     <header class="site-header border-bottom shadow-sm">
       <div class="container">
         <nav class="navbar navbar-expand-lg navbar-light py-3">
-          <a class="navbar-brand fw-bold text-primary" href="#">
-            TechEvents
-          </a>
+          <a class="navbar-brand fw-bold text-primary" href="#"> TechEvents </a>
           <button
             class="navbar-toggler"
             type="button"
@@ -67,11 +65,16 @@
         <div class="container">
           <div class="row align-items-center gy-4">
             <div class="col-lg-6">
-              <span class="badge bg-primary bg-opacity-15 text-primary mb-3">Gestión de eventos</span>
-              <h1 class="display-5 fw-bold">Diseño para registrar y administrar eventos tecnológicos</h1>
+              <span class="badge bg-primary bg-opacity-15 mb-3"
+                >Gestión de eventos</span
+              >
+              <h1 class="display-5 fw-bold">
+                Diseño para registrar y administrar eventos tecnológicos
+              </h1>
               <p class="lead text-muted">
-                Interfaz basada en Bootstrap con formulario modal, filtros offcanvas,
-                tarjetas destacadas, tabla responsive, badges, list group y paginación simulada.
+                Interfaz basada en Bootstrap con formulario modal, filtros
+                offcanvas, tarjetas destacadas, tabla responsive, badges, list
+                group y paginación simulada.
               </p>
 
               <div class="d-flex flex-wrap gap-2">
@@ -100,18 +103,25 @@
                 <div class="card-body">
                   <h5 class="card-title">Resumen visual</h5>
                   <p class="card-text text-muted">
-                    Se muestra aquí el diseño de una lista de eventos con tarjetas y estado de participación.
+                    Se muestra aquí el diseño de una lista de eventos con
+                    tarjetas y estado de participación.
                   </p>
                   <ul class="list-group list-group-flush">
-                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                    <li
+                      class="list-group-item d-flex justify-content-between align-items-center"
+                    >
                       Eventos activos
                       <span class="badge bg-success">0</span>
                     </li>
-                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                    <li
+                      class="list-group-item d-flex justify-content-between align-items-center"
+                    >
                       Categorías disponibles
                       <span class="badge bg-info">0</span>
                     </li>
-                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                    <li
+                      class="list-group-item d-flex justify-content-between align-items-center"
+                    >
                       Cupos totales
                       <span class="badge bg-warning text-dark">0</span>
                     </li>
@@ -129,21 +139,27 @@
             <div class="stat-card p-4 rounded-4 shadow-sm h-100">
               <h6 class="text-uppercase text-muted">Eventos programados</h6>
               <p class="display-6 mb-2">0</p>
-              <span class="badge bg-primary bg-opacity-15 text-primary">Nuevas ideas</span>
+              <span class="badge bg-primary bg-opacity-15 text-primary"
+                >Nuevas ideas</span
+              >
             </div>
           </div>
           <div class="col-md-4">
             <div class="stat-card p-4 rounded-4 shadow-sm h-100">
               <h6 class="text-uppercase text-muted">Inscripciones abiertas</h6>
               <p class="display-6 mb-2">0</p>
-              <span class="badge bg-success bg-opacity-15 text-success">Cupos libres</span>
+              <span class="badge bg-success bg-opacity-15 text-success"
+                >Cupos libres</span
+              >
             </div>
           </div>
           <div class="col-md-4">
             <div class="stat-card p-4 rounded-4 shadow-sm h-100">
               <h6 class="text-uppercase text-muted">Eventos por categoría</h6>
               <p class="display-6 mb-2">0</p>
-              <span class="badge bg-info bg-opacity-15 text-info">Tech, Cloud, AI</span>
+              <span class="badge bg-info bg-opacity-15 text-info"
+                >Tech, Cloud, AI</span
+              >
             </div>
           </div>
         </div>
@@ -153,98 +169,39 @@
         <div class="d-flex justify-content-between align-items-center mb-3">
           <div>
             <h2 class="h4">Eventos destacados</h2>
-            <p class="text-muted mb-0">Diseño de tarjetas con detalles colapsables y badges de categoría.</p>
+            <p class="text-muted mb-0">
+              Diseño de tarjetas con detalles colapsables y badges de categoría.
+            </p>
           </div>
-          <span class="badge bg-secondary bg-opacity-15 text-secondary">Interfaz visual</span>
+
+          <span class="badge bg-secondary bg-opacity-15">
+            Interfaz visual
+          </span>
         </div>
 
-        <div class="row g-4">
-          <div class="col-lg-4">
-            <div class="card event-card h-100 shadow-sm">
-              <div class="card-body">
-                <div class="d-flex justify-content-between align-items-start mb-3">
-                  <div>
-                    <h5 class="card-title mb-1">Hackathon IoT</h5>
-                    <p class="text-muted mb-0">Auditorio Central</p>
-                  </div>
-                  <span class="badge bg-info">IoT</span>
-                </div>
-                <p class="text-muted small mb-3">12 oct 2026 · 10:00 · 120 cupos</p>
-                <button class="btn btn-sm btn-outline-primary" type="button" data-bs-toggle="collapse" data-bs-target="#detalle1" aria-expanded="false" aria-controls="detalle1">
-                  Ver detalles
-                </button>
-                <div class="collapse mt-3" id="detalle1">
-                  <p class="mb-0 text-muted">Actividad práctica con equipos, exhibición de prototipos y mentorías en vivo.</p>
-                </div>
-              </div>
-              <div class="card-footer bg-transparent border-top d-flex justify-content-between">
-                <span class="badge bg-success">Disponible</span>
-                <small class="text-muted">Cupo límite 80</small>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4">
-            <div class="card event-card h-100 shadow-sm">
-              <div class="card-body">
-                <div class="d-flex justify-content-between align-items-start mb-3">
-                  <div>
-                    <h5 class="card-title mb-1">Conferencia AI</h5>
-                    <p class="text-muted mb-0">Sala 5</p>
-                  </div>
-                  <span class="badge bg-warning text-dark">AI</span>
-                </div>
-                <p class="text-muted small mb-3">18 nov 2026 · 14:00 · 200 cupos</p>
-                <button class="btn btn-sm btn-outline-primary" type="button" data-bs-toggle="collapse" data-bs-target="#detalle2" aria-expanded="false" aria-controls="detalle2">
-                  Ver detalles
-                </button>
-                <div class="collapse mt-3" id="detalle2">
-                  <p class="mb-0 text-muted">Panel de expertos, networking y charla sobre tendencias de machine learning.</p>
-                </div>
-              </div>
-              <div class="card-footer bg-transparent border-top d-flex justify-content-between">
-                <span class="badge bg-danger">Cierre pronto</span>
-                <small class="text-muted">Cupo límite 60</small>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4">
-            <div class="card event-card h-100 shadow-sm">
-              <div class="card-body">
-                <div class="d-flex justify-content-between align-items-start mb-3">
-                  <div>
-                    <h5 class="card-title mb-1">Workshop Cloud</h5>
-                    <p class="text-muted mb-0">Estudio B</p>
-                  </div>
-                  <span class="badge bg-primary">Cloud</span>
-                </div>
-                <p class="text-muted small mb-3">05 dic 2026 · 09:00 · 150 cupos</p>
-                <button class="btn btn-sm btn-outline-primary" type="button" data-bs-toggle="collapse" data-bs-target="#detalle3" aria-expanded="false" aria-controls="detalle3">
-                  Ver detalles
-                </button>
-                <div class="collapse mt-3" id="detalle3">
-                  <p class="mb-0 text-muted">Sesión práctica sobre infraestructura y despliegue en nubes públicas.</p>
-                </div>
-              </div>
-              <div class="card-footer bg-transparent border-top d-flex justify-content-between">
-                <span class="badge bg-secondary">Confirmado</span>
-                <small class="text-muted">Cupo límite 45</small>
-              </div>
-            </div>
-          </div>
-        </div>
+        <div class="row g-4" id="contenedorCards"></div>
       </section>
 
       <section id="tabla-eventos" class="container py-4">
-        <div class="d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center mb-3 gap-3">
+        <div
+          class="d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center mb-3 gap-3"
+        >
           <div>
             <h2 class="h5 mb-1">Listado de eventos</h2>
-            <p class="text-muted mb-0">Diseño de tabla responsive con opciones de búsqueda y acciones.</p>
+            <p class="text-muted mb-0">
+              Diseño de tabla responsive con opciones de búsqueda y acciones.
+            </p>
           </div>
           <div class="d-flex gap-2">
-            <input class="form-control form-control-sm" type="search" placeholder="Buscar evento" aria-label="Buscar evento" />
-            <button class="btn btn-sm btn-outline-primary" type="button">Ordenar</button>
+            <input
+              class="form-control form-control-sm"
+              type="search"
+              placeholder="Buscar evento"
+              aria-label="Buscar evento"
+            />
+            <button class="btn btn-sm btn-outline-primary" type="button">
+              Ordenar
+            </button>
           </div>
         </div>
 
@@ -272,8 +229,12 @@
                 <td><span class="badge bg-info">IoT</span></td>
                 <td>80</td>
                 <td>
-                  <button class="btn btn-sm btn-outline-secondary">Editar</button>
-                  <button class="btn btn-sm btn-outline-danger">Eliminar</button>
+                  <button class="btn btn-sm btn-outline-secondary">
+                    Editar
+                  </button>
+                  <button class="btn btn-sm btn-outline-danger">
+                    Eliminar
+                  </button>
                 </td>
               </tr>
               <tr>
@@ -285,8 +246,12 @@
                 <td><span class="badge bg-warning text-dark">AI</span></td>
                 <td>60</td>
                 <td>
-                  <button class="btn btn-sm btn-outline-secondary">Editar</button>
-                  <button class="btn btn-sm btn-outline-danger">Eliminar</button>
+                  <button class="btn btn-sm btn-outline-secondary">
+                    Editar
+                  </button>
+                  <button class="btn btn-sm btn-outline-danger">
+                    Eliminar
+                  </button>
                 </td>
               </tr>
               <tr>
@@ -298,8 +263,12 @@
                 <td><span class="badge bg-primary">Cloud</span></td>
                 <td>45</td>
                 <td>
-                  <button class="btn btn-sm btn-outline-secondary">Editar</button>
-                  <button class="btn btn-sm btn-outline-danger">Eliminar</button>
+                  <button class="btn btn-sm btn-outline-secondary">
+                    Editar
+                  </button>
+                  <button class="btn btn-sm btn-outline-danger">
+                    Eliminar
+                  </button>
                 </td>
               </tr>
             </tbody>
@@ -308,11 +277,17 @@
 
         <nav aria-label="Paginación eventos" class="mt-4">
           <ul class="pagination justify-content-center mb-0">
-            <li class="page-item disabled"><a class="page-link">Anterior</a></li>
-            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+            <li class="page-item disabled">
+              <a class="page-link">Anterior</a>
+            </li>
+            <li class="page-item active">
+              <a class="page-link" href="#">1</a>
+            </li>
             <li class="page-item"><a class="page-link" href="#">2</a></li>
             <li class="page-item"><a class="page-link" href="#">3</a></li>
-            <li class="page-item"><a class="page-link" href="#">Siguiente</a></li>
+            <li class="page-item">
+              <a class="page-link" href="#">Siguiente</a>
+            </li>
           </ul>
         </nav>
       </section>
@@ -320,91 +295,165 @@
 
     <footer class="footer py-4 bg-white border-top">
       <div class="container text-center text-muted small">
-        Diseño de sistema web de eventos tecnológicos | Solo interfaz sin lógica.
+        Diseño de sistema web de eventos tecnológicos | Solo interfaz sin
+        lógica.
       </div>
     </footer>
 
     <aside class="toast-container position-fixed top-0 end-0 p-3">
-      <div class="toast show align-items-center text-bg-primary border-0" role="alert" aria-live="assertive" aria-atomic="true">
+      <div
+        class="toast show align-items-center text-bg-primary border-0"
+        role="alert"
+        aria-live="assertive"
+        aria-atomic="true"
+      >
         <div class="d-flex">
           <div class="toast-body">
-            Ejemplo visual de Toast de notificación para la gestión de eventos.
+            Bienvenido a TechEvents. Quiere registrar un nuevo evento.
+            <div class="d-flex flex-wrap gap-2">
+                <button
+                  class="btn btn-primary btn-lg"
+                  type="button"
+                  data-bs-toggle="modal"
+                  data-bs-target="#eventoModal"
+                  style="font-size: medium;"
+                >
+                  Presiona aquí para un nuevo evento
+                </button>
           </div>
-          <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Cerrar"></button>
+          <button
+            type="button"
+            class="btn-close btn-close-white me-2 m-auto"
+            data-bs-dismiss="toast"
+            aria-label="Cerrar"
+          ></button>
         </div>
       </div>
     </aside>
 
-    <div class="modal fade" id="eventoModal" tabindex="-1" aria-labelledby="eventoModalLabel" aria-hidden="true">
+    <div
+      class="modal fade"
+      id="eventoModal"
+      tabindex="-1"
+      aria-labelledby="eventoModalLabel"
+      aria-hidden="true"
+    >
       <div class="modal-dialog modal-lg modal-dialog-centered">
         <div class="modal-content rounded-4">
           <div class="modal-header border-0">
             <div>
-              <h5 class="modal-title" id="eventoModalLabel">Registrar evento tecnológico</h5>
-              <p class="text-muted mb-0">Complete los datos necesarios para crear un nuevo evento.</p>
+              <h5 class="modal-title" id="eventoModalLabel">
+                Registrar evento tecnológico
+              </h5>
+              <p class="text-muted mb-0">
+                Complete los datos necesarios para crear un nuevo evento.
+              </p>
             </div>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Cerrar"
+            ></button>
           </div>
           <div class="modal-body">
-            <form class="row g-3">
+            <form id="formEvento" class="row g-3">
               <div class="col-md-6">
                 <label class="form-label">Código</label>
-                <input type="text" class="form-control" placeholder="EVT-004" />
+                <input id="codigo" type="text" class="form-control" />
               </div>
+
               <div class="col-md-6">
                 <label class="form-label">Nombre del evento</label>
-                <input type="text" class="form-control" placeholder="Charla de ciberseguridad" />
+                <input id="nombre" type="text" class="form-control" />
               </div>
+
               <div class="col-md-6">
                 <label class="form-label">Lugar</label>
-                <input type="text" class="form-control" placeholder="Sala de conferencias" />
+                <input id="lugar" type="text" class="form-control" />
               </div>
+
               <div class="col-md-3">
                 <label class="form-label">Fecha</label>
-                <input type="date" class="form-control" />
+                <input id="fecha" type="date" class="form-control" />
               </div>
+
               <div class="col-md-3">
                 <label class="form-label">Hora</label>
-                <input type="time" class="form-control" />
+                <input id="hora" type="time" class="form-control" />
               </div>
+
               <div class="col-md-6">
                 <label class="form-label">Categoría</label>
-                <select class="form-select">
-                  <option selected>Seleccionar categoría</option>
+
+                <select id="categoria" class="form-select">
                   <option>IoT</option>
+
                   <option>AI</option>
+
                   <option>Cloud</option>
+
                   <option>Seguridad</option>
                 </select>
               </div>
+
               <div class="col-md-6">
                 <label class="form-label">Cupos</label>
-                <input type="number" class="form-control" placeholder="100" />
+                <input id="cupos" type="number" class="form-control" />
               </div>
+
               <div class="col-12">
                 <label class="form-label">Descripción</label>
-                <textarea class="form-control" rows="4" placeholder="Descripción breve del evento..."></textarea>
+                <textarea
+                  id="descripcion"
+                  class="form-control"
+                  rows="4"
+                ></textarea>
               </div>
             </form>
           </div>
           <div class="modal-footer border-0">
-            <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancelar</button>
-            <button type="button" class="btn btn-primary">Guardar evento</button>
+            <button
+              type="button"
+              class="btn btn-outline-secondary"
+              data-bs-dismiss="modal"
+            >
+              Cancelar
+            </button>
+            <button id="btnGuardar" type="button" class="btn btn-primary">
+              Guardar evento
+            </button>
           </div>
         </div>
       </div>
     </div>
 
-    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasFiltros" aria-labelledby="offcanvasFiltrosLabel">
+    <div
+      class="offcanvas offcanvas-end"
+      tabindex="-1"
+      id="offcanvasFiltros"
+      aria-labelledby="offcanvasFiltrosLabel"
+    >
       <div class="offcanvas-header">
-        <h5 class="offcanvas-title" id="offcanvasFiltrosLabel">Filtros de búsqueda</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
+        <h5 class="offcanvas-title" id="offcanvasFiltrosLabel">
+          Filtros de búsqueda
+        </h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="offcanvas"
+          aria-label="Cerrar"
+        ></button>
       </div>
       <div class="offcanvas-body">
         <form class="mb-4">
           <div class="mb-3">
             <label class="form-label">Buscar por nombre</label>
-            <input type="text" class="form-control" placeholder="Ej. Hackathon" />
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Ej. Hackathon"
+            />
           </div>
           <div class="mb-3">
             <label class="form-label">Categoría</label>
@@ -430,21 +479,29 @@
             <label class="form-label">Cupos disponibles</label>
             <input type="range" class="form-range" min="0" max="300" />
           </div>
-          <button type="button" class="btn btn-primary w-100">Aplicar filtros</button>
+          <button type="button" class="btn btn-primary w-100">
+            Aplicar filtros
+          </button>
         </form>
 
         <div class="mb-4">
           <h6 class="mb-3">Categorías rápidas</h6>
           <ul class="list-group">
-            <li class="list-group-item d-flex justify-content-between align-items-center">
+            <li
+              class="list-group-item d-flex justify-content-between align-items-center"
+            >
               IA
               <span class="badge bg-warning text-dark">8</span>
             </li>
-            <li class="list-group-item d-flex justify-content-between align-items-center">
+            <li
+              class="list-group-item d-flex justify-content-between align-items-center"
+            >
               Nube
               <span class="badge bg-primary">5</span>
             </li>
-            <li class="list-group-item d-flex justify-content-between align-items-center">
+            <li
+              class="list-group-item d-flex justify-content-between align-items-center"
+            >
               Seguridad
               <span class="badge bg-danger">3</span>
             </li>
@@ -468,5 +525,6 @@
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
       crossorigin="anonymous"
     ></script>
+    <script src="js/script.js"></script>
   </body>
 </html>
