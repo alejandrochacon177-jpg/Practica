@@ -23,22 +23,21 @@ document.addEventListener('DOMContentLoaded', function() {
     };
 
     function iniciar() {
-        const datos = localStorage.getItem('eventos');
-        eventos = datos ? JSON.parse(datos) : obtenerEjemplos();
-        guardar();
+        cargarEventos();
         actualizarTodo();
     }
 
-    function obtenerEjemplos() {
-        return [
-            { codigo: 'TECH01', nombre: 'Hackathon 2026', lugar: 'Centro', fecha: '2026-08-15', hora: '09:00', categoria: 'AI', cupos: 100, descripcion: 'Evento de innovación tecnológica' },
-            { codigo: 'TECH02', nombre: 'Cloud Summit', lugar: 'Hotel', fecha: '2026-09-20', hora: '14:00', categoria: 'Cloud', cupos: 150, descripcion: 'Conferencia sobre la nube' },
-            { codigo: 'TECH03', nombre: 'IoT Workshop', lugar: 'Laboratorio', fecha: '2026-07-10', hora: '10:30', categoria: 'IoT', cupos: 30, descripcion: 'Taller de IoT' },
-            { codigo: 'TECH04', nombre: 'Ciberseguridad', lugar: 'Auditorio', fecha: '2026-10-05', hora: '11:00', categoria: 'Seguridad', cupos: 80, descripcion: 'Conferencia de seguridad' }
-        ];
+    function cargarEventos() {
+        const datos = localStorage.getItem('eventos');
+        if (datos) {
+            eventos = JSON.parse(datos);
+        } else {
+            eventos = [];
+            guardarEventos();
+        }
     }
 
-    function guardar() {
+    function guardarEventos() {
         localStorage.setItem('eventos', JSON.stringify(eventos));
     }
 
@@ -50,15 +49,14 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function renderizarTabla() {
-        const inicio = (pagina - 1) * porPagina;
-        const fin = inicio + porPagina;
-        const paginados = eventos.slice(inicio, fin);
-
-        if (paginados.length === 0) {
-            tabla.innerHTML = `<tr><td colspan="8" class="text-center">No hay eventos</td></tr>`;
+        if (eventos.length === 0) {
+            tabla.innerHTML = `<tr><td colspan="8" class="text-center py-4">No hay eventos registrados. ¡Crea el primero!</td></tr>`;
             return;
         }
 
+        const inicio = (pagina - 1) * porPagina;
+        const fin = inicio + porPagina;
+        const paginados = eventos.slice(inicio, fin);
         tabla.innerHTML = paginados.map(e => `
             <tr>
                 <td><span class="badge bg-secondary">${e.codigo}</span></td>
@@ -77,13 +75,23 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function renderizarCards() {
-        const mostrar = eventos.slice(0, 3);
-        
-        if (mostrar.length === 0) {
-            cards.innerHTML = `<div class="col-12"><p class="text-center">No hay eventos destacados</p></div>`;
+        if (eventos.length === 0) {
+            cards.innerHTML = `
+                <div class="col-12">
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-body text-center py-5">
+                            <p class="text-muted mb-0">No hay eventos destacados para mostrar</p>
+                            <button class="btn btn-primary mt-3" data-bs-toggle="modal" data-bs-target="#eventoModal">
+                                Crear primer evento
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            `;
             return;
         }
 
+        const mostrar = eventos.slice(0, 3);
         cards.innerHTML = mostrar.map(e => `
             <div class="col-md-4">
                 <div class="card h-100 shadow-sm">
@@ -92,7 +100,7 @@ document.addEventListener('DOMContentLoaded', function() {
                             <h5 class="card-title">${e.nombre}</h5>
                             <span class="badge bg-primary">${e.categoria}</span>
                         </div>
-                        <p class="card-text text-muted small">${e.descripcion.substring(0, 50)}...</p>
+                        <p class="card-text text-muted small">${e.descripcion.substring(0, 50)}${e.descripcion.length > 50 ? '...' : ''}</p>
                         <div class="d-flex justify-content-between">
                             <span class="badge bg-secondary">${e.lugar}</span>
                             <span class="badge bg-success">${e.cupos} cupos</span>
@@ -117,14 +125,21 @@ document.addEventListener('DOMContentLoaded', function() {
         const categorias = new Set(eventos.map(e => e.categoria)).size;
         const cupos = eventos.reduce((sum, e) => sum + e.cupos, 0);
         const futuros = eventos.filter(e => new Date(e.fecha) >= new Date()).length;
+        const conCupos = eventos.filter(e => e.cupos > 0).length;
 
-        document.querySelector('#hero .badge.bg-success').textContent = total;
-        document.querySelector('#hero .badge.bg-info').textContent = categorias;
-        document.querySelector('#hero .badge.bg-warning').textContent = cupos;
+        const heroBadges = document.querySelectorAll('#hero .badge');
+        if (heroBadges.length >= 3) {
+            heroBadges[0].textContent = total;
+            heroBadges[1].textContent = categorias;
+            heroBadges[2].textContent = cupos;
+        }
 
-        document.querySelector('#estadisticas .display-6').textContent = futuros;
-        document.querySelector('#estadisticas .col-md-4:nth-child(2) .display-6').textContent = eventos.filter(e => e.cupos > 0).length;
-        document.querySelector('#estadisticas .col-md-4:nth-child(3) .display-6').textContent = categorias;
+        const estadisticas = document.querySelectorAll('#estadisticas .display-6');
+        if (estadisticas.length >= 3) {
+            estadisticas[0].textContent = futuros;
+            estadisticas[1].textContent = conCupos;
+            estadisticas[2].textContent = categorias;
+        }
 
         const items = document.querySelectorAll('#hero .list-group-item');
         if (items.length >= 3) {
@@ -236,17 +251,18 @@ document.addEventListener('DOMContentLoaded', function() {
         if (editando) {
             const index = eventos.findIndex(e => e.codigo === editando.codigo);
             eventos[index] = datos;
-            toast('Evento actualizado');
+            toast('Evento actualizado correctamente');
             editando = null;
         } else {
             eventos.push(datos);
-            toast('Evento registrado');
+            toast('Evento registrado correctamente');
         }
 
-        guardar();
+        guardarEventos();
         actualizarTodo();
         limpiar();
-        bootstrap.Modal.getInstance(document.getElementById('eventoModal')).hide();
+        const modal = bootstrap.Modal.getInstance(document.getElementById('eventoModal'));
+        if (modal) modal.hide();
     }
 
     function editarEvento(codigo) {
@@ -268,11 +284,11 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function eliminarEvento(codigo) {
-        if (!confirm('¿Eliminar este evento?')) return;
+        if (!confirm('¿Está seguro de eliminar este evento?')) return;
         eventos = eventos.filter(e => e.codigo !== codigo);
-        guardar();
+        guardarEventos();
         actualizarTodo();
-        toast('Evento eliminado', 'warning');
+        toast('Evento eliminado correctamente', 'warning');
     }
 
     function limpiar() {
@@ -284,6 +300,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function buscarEventos() {
         const termino = buscar.value.toLowerCase();
+        if (!termino) {
+            cargarEventos();
+            actualizarTodo();
+            return;
+        }
+
         const filtrados = eventos.filter(e => 
             e.nombre.toLowerCase().includes(termino) ||
             e.codigo.toLowerCase().includes(termino) ||
@@ -301,13 +323,18 @@ document.addEventListener('DOMContentLoaded', function() {
 
     let ascendente = true;
     function ordenarEventos() {
+        if (eventos.length === 0) {
+            toast('No hay eventos para ordenar', 'warning');
+            return;
+        }
+
         ascendente = !ascendente;
         eventos.sort((a, b) => {
             const fa = new Date(a.fecha + ' ' + a.hora);
             const fb = new Date(b.fecha + ' ' + b.hora);
             return ascendente ? fa - fb : fb - fa;
         });
-        guardar();
+        guardarEventos();
         actualizarTodo();
         toast(`Ordenado ${ascendente ? 'ascendente' : 'descendente'}`);
     }
@@ -332,7 +359,9 @@ document.addEventListener('DOMContentLoaded', function() {
         actualizarPaginacion();
         eventos = originales;
 
-        bootstrap.Offcanvas.getInstance(document.getElementById('offcanvasFiltros')).hide();
+        const offcanvas = bootstrap.Offcanvas.getInstance(document.getElementById('offcanvasFiltros'));
+        if (offcanvas) offcanvas.hide();
+        
         toast(`Mostrando ${filtrados.length} eventos filtrados`);
     }
 
@@ -340,7 +369,8 @@ document.addEventListener('DOMContentLoaded', function() {
     buscar.oninput = buscarEventos;
     btnOrdenar.onclick = ordenarEventos;
     
-    document.querySelector('#offcanvasFiltros .btn-primary').onclick = aplicarFiltros;
+    const btnFiltros = document.querySelector('#offcanvasFiltros .btn-primary');
+    if (btnFiltros) btnFiltros.onclick = aplicarFiltros;
     
     document.getElementById('eventoModal').addEventListener('hidden.bs.modal', limpiar);
 
