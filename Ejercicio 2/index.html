@@ -17,9 +17,49 @@
     </head>
 
     <body>
-        <header>
-            <!-- place navbar here -->
-        </header>
+        <header class="site-header border-bottom">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light px-0">
+          <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+            <img src="img/logo.png" alt="Logo" width="36" height="36" />
+            <span class="fw-semibold">Academia Tecnológica</span>
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#mainNav"
+            aria-controls="mainNav"
+            aria-expanded="false"
+            aria-label="Mostrar menú"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="mainNav">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
+              <li class="nav-item">
+                <a class="nav-link active" href="#inicial">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#cursos">Cursos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#horarios">Horarios</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#faq">FAQ</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#contacto">Contacto</a>
+              </li>
+            </ul>
+            <button id="cambiartema" class="btn btn-outline-primary btn-sm ms-lg-3">
+              Modo oscuro
+            </button>
+          </div>
+        </nav>
+      </div>
+    </header>
         <main></main>
         <footer>
             <!-- place footer here -->
