@@ -1,0 +1,475 @@
+<!doctype html>
+<html lang="es" data-bs-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Academia Tecnológica</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <div id="pageSpinner" class="page-spinner d-flex justify-content-center align-items-center">
+    <div class="spinner-border text-primary" role="status"></div></div>
+    </div>
+    <header class="site-header border-bottom">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light px-0">
+          <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+            <img src="img/logo.png" alt="Logo" width="36" height="36" />
+            <span class="fw-semibold">Academia Tecnológica</span>
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#mainNav"
+            aria-controls="mainNav"
+            aria-expanded="false"
+            aria-label="Mostrar menú"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="mainNav">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
+              <li class="nav-item">
+                <a class="nav-link active" href="#inicial">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#cursos">Cursos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#horarios">Horarios</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#faq">FAQ</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#contacto">Contacto</a>
+              </li>
+            </ul>
+            <button id="cambiartema" class="btn btn-outline-primary btn-sm ms-lg-3">
+              Modo oscuro
+            </button>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main class="flex-grow-1">
+      <section class="hero text-center text-white">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+          <span class="badge bg-white text-primary-soft mb-3">
+            Formación tecnológica con estilo
+          </span>
+          <h2 class="display-5 fw-bold mb-3" style="color: black;">Impulsa tu carrera en tecnología</h2>
+          <p class="lead mx-auto mb-4" style="max-width: 720px; color: black;">
+            Descubre cursos prácticos en programación, inteligencia artificial, desarrollo móvil y ciberseguridad.
+            Aprende con proyectos reales y obtén las habilidades que el mercado necesita.
+          </p>
+          <a href="#cursos" class="btn btn-primary btn-lg px-4">Ver cursos</a>
+        </div>
+      </section>
+
+      <section class="container py-5" id="inicial">
+        <div class="row align-items-center gap-4">
+          <div class="col-lg-6">
+            <span class="section-label mb-2">Bienvenidos</span>
+            <h2 class="section-title">Una academia enfocada en resultados</h2>
+            <p class="section-text">
+              En nuestra academia tenemos una metodología activa que combina teoría y práctica.
+              Si quieres aprender diseño web, programación, inteligencia artificial o ciberseguridad, aquí tienes un espacio moderno y motivador.
+            </p>
+            <p class="section-text">
+              Nuestro equipo de instructores te acompañará en cada paso, desde tu primer proyecto hasta tu primera certificación.
+            </p>
+          </div>
+          <div class="col-lg-5">
+            <div class="card feature-card shadow-sm">
+              <h1 class="mb-4" style="text-align: center;">Galeria</h1>
+            <div id="galeria" class="carousel slide carousel-fade shadow rounded overflow-hidden"
+                data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button data-bs-target="#galeria" data-bs-slide-to="0" class="active" aria-label="Imagen 1"></button>
+                    <button data-bs-target="#galeria" data-bs-slide-to="1" aria-label="Imagen 2"></button>
+                    <button data-bs-target="#galeria" data-bs-slide-to="2" aria-label="Imagen 3"></button>
+                </div>
+
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="img/1mejorada.png" class="d-block w-100" alt="Imagen 1">
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/2mejorada.png" class="d-block w-100" alt="Imagen 2">
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/3.webp" class="d-block w-100" alt="Imagen 3">
+                    </div>
+                    </div>
+                </div>
+
+                <button class="carousel-control-prev" data-bs-target="#galeria" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                    <span class="visually-hidden">Anterior</span>
+                </button>
+                <button class="carousel-control-next" data-bs-target="#galeria" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                    <span class="visually-hidden">Siguiente</span>
+                </button>
+            </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="container py-5">
+        <div class="section-header text-center mb-4">
+          <h2 class="section-title">Galería</h2>
+          <p class="section-text text-muted">
+            Imágenes de nuestros espacios y actividades de aprendizaje.
+          </p>
+        </div>
+        <div class="row g-4 justify-content-center">
+          <div class="col-6 col-md-3">
+            <div class="card gallery-card overflow-hidden">
+              <img src="img/a1.webp" alt="Galería 1" class="card-img-top" />
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="card gallery-card overflow-hidden">
+              <img src="img/a2.jpg" alt="Galería 2" class="card-img-top" />
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="card gallery-card overflow-hidden">
+              <img src="img/a3.jpg" alt="Galería 3" class="card-img-top" />
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="card gallery-card overflow-hidden">
+              <img src="img/a4.jpg" alt="Galería 4" class="card-img-top" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="container py-5" id="cursos">
+        <div class="section-header text-center mb-5">
+          <span class="section-label">Nuestros cursos</span>
+          <h2 class="section-title">Cursos destacados</h2>
+          <p class="section-text text-muted">
+            Elige el programa que más se adapte a tus objetivos y comienza a aprender hoy.
+          </p>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-6 col-xl-4">
+            <article class="card course-card h-100 shadow-sm">
+              <img src="img/programacionweb.jpg" class="card-img-top" alt="Programación Web" />
+              <div class="card-body">
+                <h3 class="h5 card-title">Programación Web</h3>
+                <p class="card-text">
+                  Construye sitios y aplicaciones modernas con HTML, CSS y JavaScript.
+                </p>
+              </div>
+            </article>
+          </div>
+          <div class="col-md-6 col-xl-4">
+            <article class="card course-card h-100 shadow-sm">
+              <img src="img/ai.jpg" class="card-img-top" alt="Inteligencia Artificial" />
+              <div class="card-body">
+                <h3 class="h5 card-title">Inteligencia Artificial</h3>
+                <p class="card-text">
+                  Aprende modelos y algoritmos para crear soluciones inteligentes.
+                </p>
+              </div>
+            </article>
+          </div>
+          <div class="col-md-6 col-xl-4">
+            <article class="card course-card h-100 shadow-sm">
+              <img src="img/movil.jpg" class="card-img-top" alt="Desarrollo Móvil" />
+              <div class="card-body">
+                <h3 class="h5 card-title">Desarrollo Móvil</h3>
+                <p class="card-text">
+                  Crea apps para Android e iOS con herramientas modernas y prácticas.
+                </p>
+              </div>
+            </article>
+          </div>
+          <div class="col-md-6 col-xl-4">
+            <article class="card course-card h-100 shadow-sm">
+              <img src="img/ciber.jpg" class="card-img-top" alt="Ciberseguridad" />
+              <div class="card-body">
+                <h3 class="h5 card-title">Ciberseguridad</h3>
+                <p class="card-text">
+                  Protege sistemas y redes aprendiendo técnicas de defensa digital.
+                </p>
+              </div>
+            </article>
+          </div>
+          <div class="col-md-6 col-xl-4">
+            <article class="card course-card h-100 shadow-sm">
+              <img src="img/basdatos.jpg" class="card-img-top" alt="Bases de datos" />
+              <div class="card-body">
+                <h3 class="h5 card-title">Bases de Datos</h3>
+                <p class="card-text">
+                  Diseña y gestiona datos con SQL y herramientas modernas.
+                </p>
+              </div>
+            </article>
+          </div>
+          <div class="col-md-6 col-xl-4">
+            <article class="card course-card h-100 shadow-sm">
+              <img src="img/2mejorada.png" class="card-img-top" alt="Inteligencia Artificial" />
+              <div class="card-body">
+                <h3 class="h5 card-title">Realidad virtual</h3>
+                <p class="card-text">
+                  Aprende a usar y crear aplicaciones para relidad virtal.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="container py-5">
+        <div class="ratio ratio-16x9 shadow rounded overflow-hidden">
+          <iframe
+            src="https://www.youtube.com/embed/VIDEO_ID"
+            title="Video institucional"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </section>
+
+      <section class="container py-5" id="faq">
+        <div class="section-header text-center mb-4">
+          <span class="section-label">FAQ</span>
+          <h2 class="section-title">Preguntas frecuentes</h2>
+        </div>
+        <div class="accordion" id="accordionExample">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+              <button
+                class="accordion-button"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseOne"
+                aria-expanded="true"
+                aria-controls="collapseOne"
+              >
+                ¿Los cursos son certificados?
+              </button>
+            </h2>
+            <div
+              id="collapseOne"
+              class="accordion-collapse collapse show"
+              aria-labelledby="headingOne"
+              data-bs-parent="#accordionExample"
+            >
+              <div class="accordion-body">
+                Sí, todos nuestros cursos incluyen certificado digital y apoyo para tu portafolio profesional.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingTwo">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseTwo"
+                aria-expanded="false"
+                aria-controls="collapseTwo"
+              >
+                ¿Son presenciales o en línea?
+              </button>
+            </h2>
+            <div
+              id="collapseTwo"
+              class="accordion-collapse collapse"
+              aria-labelledby="headingTwo"
+              data-bs-parent="#accordionExample"
+            >
+              <div class="accordion-body">
+                Ofrecemos ambas modalidades: clases en línea en vivo y sesiones presenciales según el curso.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingThree">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseThree"
+                aria-expanded="false"
+                aria-controls="collapseThree"
+              >
+                ¿Puedo tomar más de un curso a la vez?
+              </button>
+            </h2>
+            <div
+              id="collapseThree"
+              class="accordion-collapse collapse"
+              aria-labelledby="headingThree"
+              data-bs-parent="#accordionExample"
+            >
+              <div class="accordion-body">
+                Sí, ofrecemos horarios flexibles y módulos compatibles para combinar cursos.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingFour">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseFour"
+                aria-expanded="false"
+                aria-controls="collapseFour"
+              >
+                ¿Qué necesito para inscribirme?
+              </button>
+            </h2>
+            <div
+              id="collapseFour"
+              class="accordion-collapse collapse"
+              aria-labelledby="headingFour"
+              data-bs-parent="#accordionExample"
+            >
+              <div class="accordion-body">
+                Solo necesitas tu nombre, correo electrónico y elegir el curso. Nosotros te apoyamos con el registro.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="container py-5" id="horarios">
+        <div class="text-center mb-4">
+          <h2 class="section-title">Horarios de cursos</h2>
+          <p class="section-text text-muted">
+            Consulta los horarios disponibles para cada área de estudio.
+          </p>
+        </div>
+        <div class="d-flex flex-wrap justify-content-center gap-2 mb-4">
+          <span class="badge rounded-pill bg-web">Programación Web</span>
+          <span class="badge rounded-pill bg-ia">Inteligencia Artificial</span>
+          <span class="badge rounded-pill bg-movil">Desarrollo Móvil</span>
+          <span class="badge rounded-pill bg-db">Base de Datos</span>
+          <span class="badge rounded-pill bg-cyber">Ciberseguridad</span>
+        </div>
+        <div class="table-responsive shadow rounded">
+          <table class="table table-bordered align-middle text-center mb-0">
+            <thead class="table-primary">
+              <tr>
+                <th>Horario</th>
+                <th>Lunes</th>
+                <th>Martes</th>
+                <th>Miércoles</th>
+                <th>Jueves</th>
+                <th>Viernes</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th class="table-light">8:00 - 10:00</th>
+                <td><span class="badge rounded-pill bg-web">Programación Web</span></td>
+                <td><span class="badge rounded-pill bg-web">Programación Web</span></td>
+                <td><span class="badge rounded-pill bg-web">Programación Web</span></td>
+                <td><span class="badge rounded-pill bg-web d-block mb-1">Programación Web</span><span class="badge rounded-pill bg-db d-block">Base de Datos</span></td>
+                <td><span class="badge rounded-pill bg-web">Taller Web</span></td>
+              </tr>
+              <tr>
+                <th class="table-light">10:15 - 12:15</th>
+                <td><span class="badge rounded-pill bg-ia">Inteligencia Artificial</span></td>
+                <td><span class="badge rounded-pill bg-ia">Inteligencia Artificial</span></td>
+                <td><span class="badge rounded-pill bg-ia d-block mb-1">Inteligencia Artificial</span><span class="badge rounded-pill bg-cyber d-block">Ciberseguridad</span></td>
+                <td><span class="badge rounded-pill bg-ia">Inteligencia Artificial</span></td>
+                <td><span class="badge rounded-pill bg-ia">Laboratorio IA</span></td>
+              </tr>
+              <tr>
+                <th class="table-light">13:30 - 15:30</th>
+                <td><span class="badge rounded-pill bg-movil">Desarrollo Móvil</span></td>
+                <td><span class="badge rounded-pill bg-movil d-block mb-1">Desarrollo Móvil</span><span class="badge rounded-pill bg-db d-block">Base de Datos</span></td>
+                <td><span class="badge rounded-pill bg-movil">Desarrollo Móvil</span></td>
+                <td><span class="badge rounded-pill bg-movil">Desarrollo Móvil</span></td>
+                <td><span class="badge rounded-pill bg-movil">Proyecto Android</span></td>
+              </tr>
+              <tr>
+                <th class="table-light">15:45 - 17:45</th>
+                <td><span class="badge rounded-pill bg-db">Base de Datos</span></td>
+                <td><span class="badge rounded-pill bg-db">Base de Datos</span></td>
+                <td><span class="badge rounded-pill bg-db">Base de Datos</span></td>
+                <td><span class="badge rounded-pill bg-db d-block mb-1">Base de Datos</span><span class="badge rounded-pill bg-cyber d-block">Ciberseguridad</span></td>
+                <td><span class="badge rounded-pill bg-db">Laboratorio SQL</span></td>
+              </tr>
+              <tr>
+                <th class="table-light">18:00 - 20:00</th>
+                <td><span class="badge rounded-pill bg-cyber">Ciberseguridad</span></td>
+                <td><span class="badge rounded-pill bg-cyber">Ciberseguridad</span></td>
+                <td><span class="badge rounded-pill bg-cyber">Ciberseguridad</span></td>
+                <td><span class="badge rounded-pill bg-cyber">Ciberseguridad</span></td>
+                <td><span class="badge rounded-pill bg-cyber">Ethical Hacking</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="container py-5" id="contacto">
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="card shadow-sm border-0">
+              <div class="card-body p-4 p-md-5">
+                <h3 class="h4 mb-4">Contacto rápido</h3>
+                <form action="#" method="post" id="formProducto" novalidate>
+                  <div class="row g-3">
+                    <div class="col-md-6">
+                      <label for="nombre" class="form-label">Nombre</label>
+                      <input type="text" class="form-control" id="nombre" name="nombre" placeholder="John Doe" required />
+                    </div>
+                    <div class="col-md-6">
+                      <label for="email" class="form-label">Correo electrónico</label>
+                      <input type="email" class="form-control" id="email" name="email" placeholder="john.doe@example.com" required />
+                    </div>
+                    <div class="col-12">
+                      <label for="descripcion" class="form-label">Mensaje</label>
+                      <textarea class="form-control" name="descripcion" id="descripcion" rows="4" required></textarea>
+                    </div>
+                  </div>
+                  <div class="d-flex flex-wrap gap-2 mt-4">
+                    <button type="submit" class="btn btn-primary rounded-pill px-4">Enviar</button>
+                    <button type="reset" class="btn btn-outline-secondary rounded-pill px-4">Reiniciar</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer mt-auto py-4">
+      <div class="container text-center">
+        <small class="text-muted">2026 Academia Tecnológica - Todos los derechos reservados.</small>
+      </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
